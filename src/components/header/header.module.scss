@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--gap-xs) var(--gap-md);
+
+    background-color: var(--primary-color);
+    color: var(--secondary-font-color);
+
+    .logo {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex: 1;
+     }
+
+
+    .menu {
+        flex: 3;
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+
+            li {
+                margin: 0 var(--gap-lg);
+
+                &:hover {
+                    cursor: pointer;
+                    color: var(--secondary-color);
+                }
+            }
+        }
+
+
+     }
+
+
+    .user {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+     }
+}
