@@ -1,22 +1,23 @@
 import styles from './header.module.scss'
+import Link from '../link/link'
+import Icon from '../icon/icon'
 
 function Header() {
   return (
     <header className={styles.container}>
         <div className={styles.logo}>
-            <h1>MyPortfolio</h1>
+            <Link page="/">
+                <h1>MyPortfolio</h1>
+            </Link>
         </div>
         <div className={styles.menu}>
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
-
-        </div>
-        <div className={styles.user}>
-            <button>Login</button>
-            <button>Register</button>
+            <Link page="/">Home</Link>
+            <Link page="/about">About</Link>
+            <Link page="/contact">Contact</Link>
+            <Link page="/login" className={styles.login}>
+                <Icon name="CiLogin" />
+                <span>Login</span>
+            </Link>
         </div>
     </header>
   )
